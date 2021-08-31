@@ -1,14 +1,24 @@
-# Project
+# MS-LaTTE Dataset
 
-> This repo has been populated by an initial template to help get you started. Please
-> make sure to update the content to build a great experience for community-building.
+The Microsoft Locations and Times of Task Execution (**MS-LaTTE**) dataset is a collection of 10,101 to-do tasks, each of which is annotated for the likely locations and times of day at which it is completed. It is stored in the file **`MS-LaTTE.json`**.
 
-As the maintainer of this project, please make a few updates:
+Each to-do task has been annotated by 3 annotators for location and 5 annotators for time to represent the propensities of different people, and resulting diversity, in when and where tasks are most often completed.
 
-- Improving this README.MD file to provide a great experience
-- Updating SUPPORT.MD with content about this project's support experience
-- Understanding the security reporting process in SECURITY.MD
-- Remove this section from the README
+In the dataset, each entry is a json dictionary with the following keys:
+
+1. **ID**: an identifier for instances in the data. 
+2. **TaskTitle**: the name of the to-do task.
+3. **ListTitle**: the name of the list in which the to-do task often appears.
+4. **LocJudgements**: a list of 3 or 4 judgements for the likely locations at which this to-do task is completed. 4 judgements are supplied in cases when there is a 3-way disagreement between the first 3 judgements. Further, each judgement contains the following properties:
+
+	- **Known**: a boolean value, indicating whether this to-do task is known to the annotator. The location labels specified below are given if and only if the value is Yes.
+	- **Locations (optional)**: one or more broad location categories. They can be Home, Work or Public.
+	- **PublicLocations (optional)**: one or more fine-grained public location categories, specified when Public is noted as one of the broad **Locations** categories. This list is populated from amongst 69 public location labels.
+
+5. **TimeJudgements**: a list of 5 judgements for the likely times of day at which this to-do task is completed. Each judgement contains the following properties:
+
+	- **Known**: a boolean value, indicating whether this to-do task is known to the annotator. The time labels are given if and only if this value is Yes.
+	- **Times**: one or more times of day. These time labels are combinations of weekday (WD) or weekend (WE), and morning, afternoon, evening, night and anytime, yielding a total of 10 possible time labels.
 
 ## Contributing
 
