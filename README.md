@@ -35,7 +35,7 @@ If you use the MS-LaTTE dataset in your work, please cite the following:
 @article{jauhar2021mslatte,
       title={MS-LaTTE: A Dataset of Where and When To-do Tasks are Completed}, 
       author={Sujay Kumar Jauhar and Nirupama Chandrasekaran and Michael Gamon and Ryen W. White},
-	  journal={arXiv preprint 2111.06902},
+      journal={arXiv preprint 2111.06902},
       year={2021}
 }
 ```
