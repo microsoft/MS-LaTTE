@@ -25,7 +25,7 @@ In the dataset, each entry is a json dictionary with the following keys:
 
 ### Note
 
-As described in our [paper](https://arxiv.org/abs/2111.06902), a pipeline to preserve user privacy was run on the source data to de-anonymize it. This included a replacement of names and numbers with random alternatives. As a result, there are some task descriptions in the data that may appear strange, such as "0 cucumbers" or "0 nails".
+As described in our [paper](https://arxiv.org/abs/2111.06902), a pipeline to preserve user privacy was run on the source data to anonymize it. This included a replacement of names and numbers with random alternatives. As a result, there are some task descriptions in the data that may appear strange, such as "0 cucumbers" or "0 nails".
 
 ## Citation
 
